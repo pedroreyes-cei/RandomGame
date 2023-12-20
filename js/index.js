@@ -39,3 +39,11 @@ function limpiarDatos() {
     location.reload()
 
 }
+
+botonComprobar.addEventListener('click', () => {
+	comprobarNumero()
+})
+
+botonLimpiar.addEventListener('click', () => {
+	limpiarDatos()
+})
