@@ -16,7 +16,7 @@ function numeroAleatorio(){
 
 function numeroAñadidoComprobacion(){
     let numero = document.querySelector(`#numeroUsuario`).value;
-    numero= parseInt(`#numeroUsuario`);
+    numero= parseInt(numero);
 
     if( numero === random){
         exitosos++;
@@ -24,6 +24,7 @@ function numeroAñadidoComprobacion(){
         result.innerHTML= `¡OLÉ! gastaste la suerte del mes`;
         result.classList.add(`correcto`);
         statistics.innerHTML=`Fallos:${fallidos}. Exitos:${exitosos}`;
+        numeroAleatorio()
 
     }else{
         fallidos++;
