@@ -14,8 +14,9 @@ function numeroAleatorio(){
 }
 
 
-function numeroAñadido(){
+function numeroAñadidoComprobacion(){
     let numero = document.querySelector(`#numeroUsuario`).value;
+    numero= parseInt(`#numeroUsuario`);
 
     if( numero === random){
         exitosos++;
@@ -41,5 +42,5 @@ function cleanData(){
 }
 
 //botones
-buttonC.addEventListener(`click`, numeroAñadido);
+buttonC.addEventListener(`click`, numeroAñadidoComprobacion);
 buttonClean.addEventListener(`click`, cleanData);
