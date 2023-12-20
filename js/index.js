@@ -23,14 +23,14 @@ function numeroAñadidoComprobacion(){
         localStorage.setItem(`exitosos`, exitosos);
         result.innerHTML= `¡OLÉ! gastaste la suerte del mes`;
         result.classList.add(`correcto`);
-        statistics.innerHTML=`Fallidos:${fallidos}. Exitos:${exitosos}`;
+        statistics.innerHTML=`Fallos:${fallidos}. Exitos:${exitosos}`;
 
     }else{
         fallidos++;
         localStorage.setItem(`fallidos`,fallidos);
         result.innerHTML=`una pena but lo esperabamos que fallaras`;
         result.classList.add(`incorrecto`);
-        statistics.innerHTML=`Fallidos:${fallidos}. Exitos:${exitosos}`;
+        statistics.innerHTML=`Fallos:${fallidos}. Exitos:${exitosos}`;
     }
 
 }
@@ -44,3 +44,7 @@ function cleanData(){
 //botones
 buttonC.addEventListener(`click`, numeroAñadidoComprobacion);
 buttonClean.addEventListener(`click`, cleanData);
+
+//inicio códigos
+numeroAleatorio()
+statistics.innerHTML=`Fallos:${fallidos}. Exitos:${exitosos}`
